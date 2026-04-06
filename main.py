@@ -1,4 +1,5 @@
 import time
+from mpu6050 import mpu6050
 
 mpu6050 = mpu6050.mpu6050(0x68)
 
