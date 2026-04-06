@@ -8,8 +8,8 @@ sensor = mpu6050(0x68)
 def accel_to_pitch_roll(acc):
     """Углы наклона в градусах из данных акселерометра (g по осям)."""
     ax, ay, az = acc["x"], acc["y"], acc["z"]
-    roll = math.degrees(math.atan2(ay, az))
-    pitch = math.degrees(math.atan2(-ax, math.sqrt(ay * ay + az * az)))
+    pitch = math.degrees(math.atan2(ay, az))
+    roll = math.degrees(math.atan2(-ax, math.sqrt(ay * ay + az * az)))
     return pitch, roll
 
 
